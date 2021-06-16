@@ -64,17 +64,30 @@ print(users["Erik"]["home_town"])
 print(users["Erik"]["lottery_numbers"])
 
 # 4. Get the species of Avril's pet Monty
-          # Avrils_pets = (users["Avril"]["pets"])
-          # print(Avrils_pets)????????????/
+
+#Dict, Dict, List Index, Dic Key
+print(users["Avril"]["pets"][0]["species"])
+
+#alternatively
+
+for pet in (users["Avril"]["pets"]):
+  if pet["name"] == "monty":
+    print(pet["species"])
 
 # 5. Get the smallest of Erik's lottery numbers
 print(min(users["Erik"]["lottery_numbers"]))
 
 # 6. Return an array of Avril's lottery numbers that are even
+
+even_numbers = []
+
 Avrils_numbers = (users["Avril"]["lottery_numbers"])
+
 for number in Avrils_numbers:
   if number % 2 == 0:
-    print(number)
+    even_numbers.append(number)
+
+print(even_numbers)
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"]["lottery_numbers"].append(7)
@@ -87,12 +100,10 @@ print(users["Erik"]["home_town"])
 # 9. Add a pet dog to Erik called "Fluffy"
 #???????????????????????
 users["Erik"]["pets"].append(
-    [
       {
   "name" : "fluffy",
   "species" : "dog"
       }
-    ]
   )
 
 print(users["Erik"]["pets"])

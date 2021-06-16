@@ -82,8 +82,3 @@ for number in numbers:
 
 print(q5_total)
 print(last_number)
-
-
-
-
-
